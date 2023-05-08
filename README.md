@@ -70,7 +70,9 @@ Force a rebuild of the executable.
 ### Make WebAssembly target
 
 ```shell
-emmake make PORT_DIR=<platform> -s STANDALONE_WASM=1
+make PORT_DIR=wasm compile -j8
+cd out/wasm
+jsc-cli coremark.js
 ```
 
 ## Systems Without `make`
